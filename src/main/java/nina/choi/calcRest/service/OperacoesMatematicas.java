@@ -1,10 +1,10 @@
 package nina.choi.calcRest.service;
 
 import nina.choi.calcRest.enuns.OperacoesEnum;
+import nina.choi.calcRest.model.Resultado;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
-import java.util.Optional;
 
 @Service
 public class OperacoesMatematicas {
@@ -13,9 +13,9 @@ public class OperacoesMatematicas {
         return 0;
     }
 
-    public int calcularOperacao(String operacao, int numero1, int numero2){
+    public Resultado calcularOperacao(String operacao, int numero1, int numero2){
         OperacoesMatematicas operacoesMatematicas =  returnOperation(operacao);
-        return operacoesMatematicas.calculo(numero1, numero2);
+        return new Resultado(operacoesMatematicas.calculo(numero1, numero2));
     }
 
     OperacoesMatematicas returnOperation(String operacao){
