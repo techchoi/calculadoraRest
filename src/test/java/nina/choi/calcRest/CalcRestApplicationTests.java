@@ -13,7 +13,7 @@ class CalcRestApplicationTests {
 
 	@Test
 	void contextLoads() {
-			int valor = operacoesMatematicas.calcularOperacao("MULTIPLICACAO", 2, 2);
+			int valor = operacoesMatematicas.calcularOperacao("SUBTRACAO", 3, 2);
 			System.out.println(valor);
 	}
 
