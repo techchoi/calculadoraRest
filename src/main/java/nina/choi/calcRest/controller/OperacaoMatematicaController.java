@@ -16,6 +16,6 @@ public class OperacaoMatematicaController {
 
     @PostMapping
     public Resultado calculo(@RequestBody CalculoModel calculoModel){
-        return operacoes.calcularOperacao(calculoModel.getOperacao(), calculoModel.getNumeroUm(), calculoModel.getNumeroDois());
+        return operacoes.calcularOperacao(calculoModel.getOperacao().toUpperCase(), calculoModel.getNumeroUm(), calculoModel.getNumeroDois());
     }
 }
